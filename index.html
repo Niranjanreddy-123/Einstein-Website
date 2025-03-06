@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Albert Einstein</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav class="navigation">
+                <div class="nav-label">
+                    <h1>Albert Einstein</h1>
+                </div>
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="menu-button">☰ Menu</label>
+                <label for="menu-toggle" class="close-button">✖ Close</label>
+                <ul class="nav-links">
+
+                    <li><a href="index.html#biography">Biography</a></li>
+                    <li><a href="index.html#publications">Publications</a></li>
+                    <li><a href="index.html#hobbies">Hobbies</a></li>
+                    <li><a href="index.html#gallery">Gallery</a></li>
+                    <li><a href="index.html#blogs">Blogs</a></li>
+
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="einstein-image-container">
+                <img src="Albert_Einstein_sticks_his_tongue.jpg" alt="Einstein poking his tongue out">
+            </div>
+            <section class="about" id="biography">
+                <h2>About Albert Einstein</h2>
+                <p id="bio-text">Albert Einstein was a theoretical physicist who developed the theory of relativity, one
+                    of
+                    the two pillars of modern physics. Born on March 14, 1879, in Ulm, Germany, Einstein's work is also
+                    known for its influence on the philosophy of science. He is best known for his mass-energy
+                    equivalence
+                    formula \(E = mc^2\), which has been dubbed "the world's most famous equation."</p>
+                <button id="read-more-btn">Read More</button>
+            </section>
+            <section class="publications" id="publications">
+                <h2>Publications</h2>
+                <div class="publications-container">
+                    <div class="publication">
+                        <img src="paper_icon.jpeg" alt="Paper Icon" class="paper-icon">
+                        <p><strong>Quantum Theory of Radiation</strong></p>
+                    </div>
+                    <div class="publication">
+                        <img src="paper_icon.jpeg" alt="Paper Icon" class="paper-icon">
+                        <p><strong>Investigations on the Theory of Brownian Movement</strong></p>
+                    </div>
+                    <div class="publication">
+                        <img src="paper_icon.jpeg" alt="Paper Icon" class="paper-icon">
+                        <p><strong>Can Quantum-Mechanical Description of Physical Reality Be Considered
+                                Complete?</strong>
+                        </p>
+                    </div>
+                    <div class="publication">
+                        <img src="paper_icon.jpeg" alt="Paper Icon" class="paper-icon">
+                        <p><strong>Unified Field Theory</strong></p>
+                    </div>
+                </div>
+                <button id="view-more-btn" onclick="window.location.href='publications.html'">View More</button>
+            </section>
+            <section class="hobbies" id="hobbies">
+                <h2>Hobbies</h2>
+                <div class="hobbies-container">
+                    <div class="hobby-block">
+                        <img src="Einstein_Violin.jpeg" alt="Einstein playing the violin">
+                        <p><strong>Playing the Violin</strong><br>Einstein was an avid violinist and often played to
+                            relax
+                            and inspire his scientific thinking.</p>
+                    </div>
+                    <div class="hobby-block">
+                        <img src="Einstein_sail.jpg" alt="Einstein sailing">
+                        <p><strong>Sailing</strong><br>Einstein enjoyed sailing as a way to connect with nature and
+                            clear
+                            his mind.</p>
+                    </div>
+                    <div class="hobby-block">
+                        <img src="Einstein_Phylosophical.jpeg" alt="Einstein in a philosophical discussion">
+                        <p><strong>Philosophical Discussions</strong><br>Einstein loved engaging in deep philosophical
+                            conversations about the universe and humanity.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="gallery" id="gallery">
+                <h2>Gallery</h2>
+                <div class="gallery-container">
+                    <img src="Einstein_img1.jpeg" alt="Einstein Image 1">
+                    <img src="Einstein_img2.jpeg" alt="Einstein Image 2">
+                    <img src="Einstein_img3.jpeg" alt="Einstein Image 3">
+                    <img src="Einstein_img4.jpeg" alt="Einstein Image 4">
+                    <img src="Einstein_img5.jpeg" alt="Einstein Image 5">
+                    <img src="Einstein_img6.jpeg" alt="Einstein Image 6">
+                </div>
+            </section>
+            <section class="blogs" id="blogs">
+                <h2>Blogs</h2>
+                <p>Exploring the mysteries of the universe through physics and mathematics.</p>
+                <ul>
+                    <li><a href="https://en.wikipedia.org/wiki/Albert_Einstein"><img src="wiki_img.jpeg"
+                                alt="Email"></a>
+                    </li>
+                    <li><a href="<a href=" https://www.linkedin.com/in/albert-einstein-123456789" target="_blank"><img
+                                src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png"
+                                alt="LinkedIn"></a></li>
+                    <li><a href="https://www.twitter.com/yourprofile"><img
+                                src="https://cdn-icons-png.flaticon.com/512/124/124021.png" alt="Twitter"></a></li>
+                </ul>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2025 Albert Einstein</p>
+        </footer>
+        <script>
+
+            const hamburgerMenu = document.getElementById("hamburger-menu");
+            const navMenu = document.getElementById("nav-menu");
+
+            hamburgerMenu.addEventListener("click", () => {
+                navMenu.classList.toggle("active");
+            });
+
+            document.getElementById("read-more-btn").addEventListener("click", function () {
+                var bioText = document.getElementById("bio-text");
+                if (bioText.innerHTML.length < 500) {
+                    bioText.innerHTML += `
+            <br><br>
+            Einstein was awarded the Nobel Prize in Physics in 1921 for his discovery of the law of the photoelectric effect, a pivotal step in the evolution of quantum theory. His intellectual achievements and originality have made the word "Einstein" synonymous with genius.
+            <br><br>
+            Beyond his scientific contributions, Einstein was a passionate advocate for civil rights, education, and world peace. He was a vocal critic of nationalism and authoritarianism, and his humanitarian efforts earned him global admiration.
+            <br><br>
+            Einstein's legacy continues to inspire scientists, philosophers, and thinkers worldwide. His theories have shaped our understanding of the universe and remain foundational to modern physics.
+        `;
+                    this.textContent = "Read Less";
+                } else {
+                    bioText.innerHTML = "Albert Einstein was a theoretical physicist who developed the theory of relativity, one of the two pillars of modern physics. Born on March 14, 1879, in Ulm, Germany, Einstein's work is also known for its influence on the philosophy of science. He is best known for his mass-energy equivalence formula \(E = mc^2\), which has been dubbed 'the world's most famous equation.'";
+                    this.textContent = "Read More";
+                }
+            });
+
+        </script>
+    </div>
+</body>
+
+</html>

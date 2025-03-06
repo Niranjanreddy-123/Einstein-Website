@@ -1,0 +1,352 @@
+body {
+    font-family: 'Georgia', serif;
+    background-color: #f5f5f5;
+    color: #333333;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+header {
+    background-color: #34495e;
+    color: #ecf0f1;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Navigation Bar */
+nav.navigation {
+    display: block;
+    background-color: #2c3e50;
+    height: 50px;
+    text-align: center;
+    position: relative;
+    padding: 10px 20px;
+}
+
+/* Hide checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Menu & Close Buttons */
+.menu-button,
+.close-button {
+    display: none;
+    /* Hidden by default */
+    background-color: #2c3e50;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+    align-items: center;
+}
+
+.nav-links li {
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 50px;
+}
+
+.nav-label {
+    display: inline-block;
+    vertical-align: middle;
+    /* Align vertically with the menu */
+    margin-right: 20px;
+    /* Space between label and menu */
+}
+
+.nav-label h1 {
+    font-size: 24px;
+    margin: 0;
+    color: #ffffff;
+}
+
+main {
+    padding-top: 80px;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+
+.einstein-image-container {
+    width: 100%;
+}
+
+.einstein-image-container img {
+    width: 100%;
+    height: 50vh;
+    border-radius: 10px;
+}
+
+section {
+    background: #ffffff;
+    padding: 20px;
+    margin: 20px auto;
+    width: 960px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(52, 73, 94, 0.1);
+    scroll-margin-top: 80px;
+}
+
+.publications-container {
+    display: grid;
+    grid-template-columns: repeat(2, 450px);
+    gap: 20px;
+    padding: 20px;
+}
+
+.publication {
+    background: #ffffff;
+    padding: 15px;
+    border: 2px solid #bdc3c7;
+    border-radius: 8px;
+}
+
+.paper-icon {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 15px;
+}
+
+.hobbies-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.hobby-block {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 20px;
+    align-items: center;
+    background: #ffffff;
+    padding: 15px;
+    border: 2px solid #bdc3c7;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(52, 73, 94, 0.1);
+}
+
+.hobby-block img {
+    width: 200px;
+    height: 150px;
+    border-radius: 8px;
+}
+
+.hobby-block p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333333;
+}
+
+#view-more-btn {
+    margin-top: 20px;
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#view-more-btn:hover {
+    background-color: #2980b9;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.gallery-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(52, 73, 94, 0.1);
+}
+
+#read-more-btn {
+    margin-top: 10px;
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#read-more-btn:hover {
+    background-color: #2980b9;
+}
+
+#blogs ul li {
+    display: inline-block;
+}
+
+#blogs ul li img {
+    width: 60px;
+    height: 60px;
+    vertical-align: middle;
+    margin: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        padding: 0;
+        width: 100%;
+        margin: 0;
+    }
+
+    .menu-button,
+    .close-button {
+        display: inline-block;
+        font-size: 24px;
+        padding: 10px;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        background-color: #0d3c63;
+        text-align: center;
+        padding: 0;
+    }
+
+    .nav-links li {
+        display: block;
+        padding: 10px 0;
+        margin: 0;
+    }
+
+    .nav-links a {
+        display: block;
+        font-size: 18px;
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+    }
+
+    #menu-toggle:checked~.nav-links {
+        display: block;
+    }
+
+    .close-button {
+        display: none;
+    }
+
+    #menu-toggle:checked~.menu-button {
+        display: none;
+    }
+
+    #menu-toggle:checked~.close-button {
+        display: inline-block;
+    }
+
+    main {
+        padding-top: 80px;
+        width: 100%;
+        margin: 0;
+    }
+
+    section {
+        width: 100%;
+        margin: 10px 0;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .publications-container,
+    .hobbies-container,
+    .gallery-container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 0;
+    }
+
+    .publication,
+    .hobby-block {
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .hobby-block {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .hobby-block img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+    }
+
+    .gallery-container img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+    }
+
+    .einstein-image-container img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+    }
+
+    #read-more-btn,
+    #view-more-btn {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    #blogs ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    #blogs ul li img {
+        width: 40px;
+        height: 40px;
+        margin: 10px;
+    }
+}
